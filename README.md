@@ -7,8 +7,10 @@ Automatic detection of fieldbus protocols and recognition of the data structure 
 
 If you don't have apache and MySQL , then you need to download and install them. you and install and configure  them separately from `https://httpd.apache.org/download.cgi` and `https://www.mysql.com/downloads/`  or as one package using this link `https://sourceforge.net/projects/xampp/`
 
-## Install mysql connector 
-run `pip install mysql-connector-python`
+## Install dependencies 
+run 
+`pip install mysql-connector-python`
+`pip install python-Levenshtein`
 
 ## Python Installation
 
