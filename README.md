@@ -15,11 +15,9 @@ run `pip install mysql-connector-python`
 Download and install python from `https://www.python.org/downloads/` 
 
 ## Database Migration
-
-``
 cd database and Run `python migrate.py`.
 This will create the database and the table for you if you have installed and configured mysql will.
-``
+
 
 ## Adding test telegram messages
 
