@@ -16,3 +16,5 @@ for row in rows:
     score = get_score(seqA,test)
     if score >= 60:
         print(row[1])
+    else:
+        print("No match was found!")
