@@ -18,7 +18,7 @@ for row in rows:
     seqA = row[2]
     score = get_score(seqA,test)    
     if score >= 60:
-        print("{}\n{}{}".format(row[1],"Score: ",score))
+        print("{} {}{}\n".format(row[1],"Score: ",score))
     else:
         result.append("No sequence found")
 
