@@ -8,3 +8,4 @@ db.createDatabase()
 
 db.setTableName("sequences")
 db.createTable()
+db.createMsaTable()

@@ -34,6 +34,12 @@ class Database:
 		cursor.execute("CREATE TABLE IF NOT EXISTS "+self.__table_name+" (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), seqA VARCHAR(255) , seqB VARCHAR(255) , score INT )")
 		return "Table "+self.__table_name+" has been created"
 
+	def createMsaTable(self):
+		self.createConnection()
+		cursor = self.__db.cursor()
+		cursor.execute("CREATE TABLE IF NOT EXISTS msa (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), consensus_seq VARCHAR(255) )")
+		return "Table msa has been created"
+
 	def createConnection(self):
 		db = mysql.connector.connect(
 		  host     = self.__localhost,
