@@ -2,8 +2,8 @@ import sys
 import Levenshtein
 from query.query import *  
 
-f = open ("data\\knx.txt","r")
-output = open('data\\Output.txt', 'w')
+f = open ("data//knx.txt","r")
+output = open('data//Output.txt', 'w')
 seqB = f.readline()
 seqA = f.readline()
 
