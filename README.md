@@ -5,12 +5,16 @@ Automatic detection of fieldbus protocols and recognition of the data structure 
 
 ## MySQL Installation
 
-If you don't have apache and MySQL , then you need to download and install them. you and install and configure  them separately from `https://httpd.apache.org/download.cgi` and `https://www.mysql.com/downloads/`  or as one package using this link `https://sourceforge.net/projects/xampp/`
+If you don't have  MySQL , then you need to download and install mysql. `https://www.mysql.com/downloads/`  or use this link `https://sourceforge.net/projects/xampp/`
 
 ## Install dependencies 
 run 
+```
 `pip install mysql-connector-python`
 `pip install python-Levenshtein`
+`pip install pyspoa`
+
+```
 
 ## Python Installation
 
@@ -23,16 +27,16 @@ This will create the database and the table for you if you have installed and co
 
 ## Adding test telegram messages
 
-In the data folder, you will find a file named `knx.txt`. This file contains a list of KNX telegrams we want to use to generate our sequence. you can make use of it or copy and replace your own telegrams in the file.
+In the data folder, you will find a file named `knx.csv`. This file contains a list of KNX telegrams we want to use to generate our sequence. you can make use of it or copy and replace your own telegrams in the file.
 
-## Generating Sequences
+## Generating Sequences 
 
-cd to the root directory and run `python sequence_alignment.py`
-This will generate and add a list of sequences to the database using the telegrams in the file `data/knx.txt`.
+cd to the root directory and run `python msa.py`
+This will generate and add a list of sequences to the database using the telegrams in the file `data/knx.csv`.
 
 ## Identifying a new telegram 
 
-For a new message you want to know the sequence it belongs to, copy and paste the message in the line `test = "BCE0362E094C000080" ` (i.e. replace `BCE0362E094C000080` with your own telegram). this line can be found in `identify.py`.
+For a new message you want to know the sequence it belongs to, copy and paste the message in the line `test = "BCE0362E094C000080" ` (i.e. replace `BCE0362E094C000080` with your own telegram). this line can be found in `identify_msa.py`.
 
-Finally you can run `python identify.py`
+Finally you can run `python identify_msa.py`
 The output will be a list of all the sequences related to the message you replaced in the variable `test`
