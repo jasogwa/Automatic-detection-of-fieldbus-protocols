@@ -16,10 +16,23 @@ class QUERY:
         cursor.execute("INSERT INTO sequences (name, seqA, seqB,score) VALUES (%s, %s, %s, %s)", (name,seqA,seqB,score))
         self.__db.commit()
 
+    def createMsa(self,name,consensus_seq):
+        self.createConnection()
+        cursor = self.__db.cursor()
+        cursor.execute("INSERT INTO msa (name, consensus_seq) VALUES (%s, %s)", (name,consensus_seq))
+        self.__db.commit()
+
     def select(self):
         self.createConnection()
         cursor = self.__db.cursor()
         cursor.execute("SELECT * FROM sequences")
+        rows = cursor.fetchall()
+        return rows
+
+    def selectMsa(self):
+        self.createConnection()
+        cursor = self.__db.cursor()
+        cursor.execute("SELECT * FROM msa")
         rows = cursor.fetchall()
         return rows
 
