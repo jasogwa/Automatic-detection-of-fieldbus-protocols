@@ -10,10 +10,9 @@ If you don't have  MySQL , then you need to download and install mysql. `https:/
 ## Install dependencies 
 run 
 ```
-`pip install mysql-connector-python`
-`pip install python-Levenshtein`
-`pip install pyspoa`
-
+pip install mysql-connector-python
+pip install python-Levenshtein
+pip install pyspoa
 ```
 
 ## Python Installation
